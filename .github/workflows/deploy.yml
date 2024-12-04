@@ -1,0 +1,21 @@
+name: 🚀 Deploy to Shuttle.rs
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: shuttle-hq/deploy-action@v2
+        with:
+          shuttle-api-key: ${{ secrets.SHUTTLE_API_KEY }}
+          project-id: ${{ secrets.SHUTTLE_PROJECT_ID }}
+          extra-args: --debug
+          secrets: |
+            BASE_URL = 'https://toddler-copilot-extension-xgtm.shuttle.app'
+            GITHUB_APP_CLIENT_ID = '${{ secrets.GH_APP_CLIENT_ID }}'
+            GITHUB_APP_CLIENT_SECRET = '${{ secrets.GH_APP_CLIENT_SECRET }}'
+        env:
+          SHUTTLE_BETA: 'true'

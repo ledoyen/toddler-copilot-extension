@@ -1,0 +1,36 @@
+name: Setup Rust and tooling
+description: Gather setup steps to ease maintenance
+
+inputs:
+  toolchain:
+    description: Rust version
+    default: '1.78.0'
+  components:
+    description: Components to install alongside the toolchain
+    default: rustfmt clippy
+  skip-just-setup:
+    description: Set to true to skip just setup
+    default: 'false'
+  setup-nextest:
+    description: Set to true to setup nextest
+    default: 'false'
+
+
+runs:
+  using: "composite"
+  steps:
+    - name: Install Rust Toolchain
+      shell: bash
+      run: |
+        rustup toolchain install ${{ inputs.toolchain }} --profile minimal --component ${{ inputs.components }}
+        rustup override set ${{ inputs.toolchain }}
+
+    - uses: taiki-e/install-action@v2
+      if: ${{ inputs.skip-just-setup != 'true' }}
+      with:
+        tool: just
+
+    - uses: taiki-e/install-action@v2
+      if: ${{ inputs.setup-nextest == 'true' }}
+      with:
+        tool: nextest

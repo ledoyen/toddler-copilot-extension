@@ -1,0 +1,13 @@
+# Cargo
+/target
+
+#IJ
+.idea/
+*.iml
+
+# Shuttle
+.shuttle*
+Secrets*.toml
+
+# Just
+.env-just
