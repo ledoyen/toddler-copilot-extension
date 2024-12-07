@@ -24,8 +24,10 @@ oauth2 = "4.4"
 reqwest = { version = "0.12", features = ["json"] }
 time = "0.3"
 
-ecdsa = { version = "0.16", features = ["pem", "verifying", "serde"] }
+ecdsa = { version = "0.16", features = ["pem", "verifying", "serde", "der"] }
 p256 = "0.13"
+signature = "2.2"
+base64 = "0.22"
 
 [profile.release]
 debug = true
