@@ -1,6 +1,9 @@
 name: 🚀 Deploy to Shuttle.rs
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - main
 
 jobs:
   deploy:

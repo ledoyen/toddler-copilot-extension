@@ -1,5 +1,5 @@
-use axum::{routing::get, Router};
 use axum::routing::post;
+use axum::{routing::get, Router};
 use shuttle_runtime::SecretStore;
 use toddler_copilot_extension::agent::chat_completion;
 use toddler_copilot_extension::config::Config;

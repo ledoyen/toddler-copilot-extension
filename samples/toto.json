@@ -1,0 +1,21 @@
+{
+  "type": "client.selection",
+  "data": {
+    "content": "selection content with line break and tabs escaped with \\n & \\t",
+    "end": {
+      "col": 5,
+      "line": 51
+    },
+    "start": {
+      "col": 3,
+      "line": 44
+    }
+  },
+  "id": "+page.svelte",
+  "is_implicit": false,
+  "metadata": {
+    "display_name": "",
+    "display_icon": "",
+    "display_url": ""
+  }
+}
