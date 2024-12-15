@@ -1,0 +1,65 @@
+{
+  "copilot_thread_id": "",
+  "messages": [
+    {
+      "role": "user",
+      "content": "coucou",
+      "copilot_references": [
+        {
+          "type": "github.repository",
+          "data": {
+            "type": "repository",
+            "id": 898581080,
+            "name": "toddler-copilot-extension",
+            "ownerLogin": "ledoyen",
+            "ownerType": "",
+            "readmePath": "",
+            "description": "",
+            "commitOID": "",
+            "ref": "",
+            "refInfo": {
+              "name": "",
+              "type": ""
+            },
+            "visibility": "",
+            "languages": null
+          },
+          "id": "ledoyen/toddler-copilot-extension",
+          "is_implicit": false,
+          "metadata": {
+            "display_name": "",
+            "display_icon": "",
+            "display_url": ""
+          }
+        },
+        {
+          "type": "client.file",
+          "data": {
+            "content": "#[derive(serde::Deserialize, Eq, PartialEq, Debug)]\npub struct [...truncated]",
+            "language": "rust"
+          },
+          "id": "file:///c%3A/workspace/toddler-copilot-extension/src/messages.rs",
+          "is_implicit": false,
+          "metadata": {
+            "display_name": "",
+            "display_icon": "",
+            "display_url": ""
+          }
+        }
+      ],
+      "copilot_confirmations": null
+    }
+  ],
+  "stop": null,
+  "top_p": 1,
+  "temperature": 0,
+  "max_tokens": 0,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "response_format": null,
+  "copilot_skills": null,
+  "agent": "mais-arreeeeeeeeteuuuu",
+  "tools": null,
+  "functions": null,
+  "model": ""
+}

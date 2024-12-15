@@ -29,5 +29,10 @@ p256 = "0.13"
 signature = "2.2"
 base64 = "0.22"
 
+serde_path_to_error = "0.1"
+
+[dev-dependencies]
+pretty_assertions = "1.4.1"
+
 [profile.release]
 debug = true
